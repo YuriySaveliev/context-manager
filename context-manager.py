@@ -1,5 +1,6 @@
 import sqlite3
 
+
 class ContextManager:
     def __init__(self, db_name):
         self.db_name = db_name
@@ -20,6 +21,7 @@ class ContextManager:
         self.connection.close()
 
         return True
+
 
 cm = ContextManager('test.db')
 with cm:
